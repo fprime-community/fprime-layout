@@ -1,11 +1,7 @@
 = F Prime Layout (FPL)
 
 This repository contains tools for laying out and visualizing topologies in the
-https://github.jpl.nasa.gov/FPRIME/fprime-sw[F Prime flight software 
-framework].
-It is designed to work as a preprocessor for the visualization tool being
-developed
-https://github.jpl.nasa.gov/robray/fprimeviz[here].
+https://nasa.github.io/fprime[F Prime flight software framework].
 
 == Requirements
 
@@ -152,9 +148,8 @@ For example:
 fpl-layout < CmdReg.txt > CmdReg.json
 ----
 
-You can export the JSON file to the visualization tool being
-developed
-https://github.jpl.nasa.gov/robray/fprimeviz[here].
+You can export the JSON file to the visualization tool available
+https://github.com/fprime-community/fprime-visual[here].
 
 === fpl-write-pic
 
@@ -191,13 +186,13 @@ on your system.
 == Examples
 
 See the 
-https://github.jpl.nasa.gov/bocchino/fprime-layout/tree/master/examples[`examples`] 
+https://github.com/fprime-community/fprime-layout/tree/main/examples[`examples`] 
 directory.
 
 == Data Formats and Implementation Notes
 
 See the
-https://github.jpl.nasa.gov/bocchino/fprime-layout/wiki[wiki].
+https://github.com/fprime-community/fprime-layout/wiki[wiki].
 
 == Testing
 

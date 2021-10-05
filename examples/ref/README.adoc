@@ -23,10 +23,10 @@ It will generate the following directories:
 ** `xml`: The extracted XML connection files.
 
 ** `txt`: The connection files converted to the
-https://github.jpl.nasa.gov/bocchino/fprime-layout/wiki/Topology-Input[FPL input format].
+https://github.com/fprime-community/fprime-layout/wiki/Topology-Input[FPL input format].
 
 ** `json`: Layout files in the
-https://github.jpl.nasa.gov/bocchino/fprime-layout/wiki/Layout-Output[FPL output format].
+https://github.com/fprime-community/fprime-layout/wiki/Layout-Output[FPL output format].
 
 ** `eps`: Rendered topologies in Encapsulated PostScript (EPS) format.
 
