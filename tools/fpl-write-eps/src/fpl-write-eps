@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+# ----------------------------------------------------------------------
+# fpl-write-eps
+# Convert FPL layout to an eps file
+# ----------------------------------------------------------------------
+
+$FPL_BIN/fpl-write-pic | pic | \
+  groff -dpaper=b0 -P-pb0 -Tps | ps2eps

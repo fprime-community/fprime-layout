@@ -1,0 +1,6 @@
+tests="
+CmdReg
+RateGroups
+Telemetry
+"
+

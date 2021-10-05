@@ -1,0 +1,68 @@
+<fpl>
+
+    <!-- Linux Timer Connection -->
+    <connection name = "BlkDrvClock">
+         <source component = "blockDrv" port = "CycleOut" type = "Cycle" num = "0"/>
+         <target component = "rateGroupDriverComp" port = "CycleIn" type = "Cycle" num = "0"/>
+    </connection>
+
+    <!-- Rate Group 1 -->
+    <connection name = "rateGroup1DriverComp">
+        <source component = "rateGroupDriverComp" port = "CycleOut" type = "Cycle" num = "0"/>
+        <target component = "rateGroup1Comp" port = "CycleIn" type = "Cycle" num = "0"/>
+    </connection>
+    <connection name = "Rg1Sg1">
+         <source component = "rateGroup1Comp" port = "RateGroupMemberOut" type = "Sched" num = "0"/>
+         <target component = "SG1" port = "schedIn" type = "Sched" num = "0"/>
+    </connection>
+    <connection name = "Rg1Sg2">
+         <source component = "rateGroup1Comp" port = "RateGroupMemberOut" type = "Sched" num = "1"/>
+         <target component = "SG2" port = "schedIn" type = "Sched" num = "0"/>
+    </connection>
+    <connection name = "Rg1ChTlm">
+         <source component = "rateGroup1Comp" port = "RateGroupMemberOut" type = "Sched" num = "2"/>
+         <target component = "chanTlm" port = "Run" type = "Sched" num = "0"/>
+    </connection>
+
+    <!-- Rate Group 2 -->
+    <connection name = "Rg2Drv">
+        <source component = "rateGroupDriverComp" port = "CycleOut" type = "Cycle" num = "1"/>
+        <target component = "rateGroup2Comp" port = "CycleIn" type = "Cycle" num = "0"/>
+    </connection>      
+    <connection name = "Rg2Seq">
+         <source component = "rateGroup2Comp" port = "RateGroupMemberOut" type = "Sched" num = "0"/>
+         <target component = "cmdSeq" port = "schedIn" type = "Sched" num = "0"/>
+    </connection>
+    <connection name = "Rg2SendBuff">
+         <source component = "rateGroup2Comp" port = "RateGroupMemberOut" type = "Sched" num = "1"/>
+         <target component = "sendBuffComp" port = "SchedIn" type = "Sched" num = "0"/>
+    </connection>
+    <connection name = "Rg2Sg3">
+         <source component = "rateGroup2Comp" port = "RateGroupMemberOut" type = "Sched" num = "2"/>
+         <target component = "SG3" port = "schedIn" type = "Sched" num = "0"/>
+    </connection>
+    <connection name = "Rg2Sg4">
+         <source component = "rateGroup2Comp" port = "RateGroupMemberOut" type = "Sched" num = "3"/>
+         <target component = "SG4" port = "schedIn" type = "Sched" num = "0"/>
+    </connection>
+   
+    <!-- Rate Group 3 -->
+    <connection name = "rateGroup3DriverComp">
+        <source component = "rateGroupDriverComp" port = "CycleOut" type = "Cycle" num = "2"/>
+        <target component = "rateGroup3Comp" port = "CycleIn" type = "Cycle" num = "0"/>
+    </connection>
+    
+    <connection name = "Rg3Health">
+         <source component = "rateGroup3Comp" port = "RateGroupMemberOut" type = "Sched" num = "0"/>
+         <target component = "health" port = "Run" type = "Sched" num = "0"/>
+    </connection>
+    <connection name = "Rg3Sg5">
+        <source component = "rateGroup3Comp" port = "RateGroupMemberOut" type = "Sched" num = "1"/>
+        <target component = "SG5" port = "schedIn" type = "Sched" num = "0"/>
+    </connection>
+    <connection name = "Rg3BlkDrv">
+         <source component = "rateGroup3Comp" port = "RateGroupMemberOut" type = "Sched" num = "2"/>
+         <target component = "blockDrv" port = "Sched" type = "Sched" num = "0"/>
+    </connection>
+    
+</fpl>

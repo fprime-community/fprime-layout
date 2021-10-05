@@ -1,0 +1,62 @@
+<fpl>
+    <connection name = "EventLoggerDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "0"/>
+         <target component = "eventLogger" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "CmdDispDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "1"/>
+         <target component = "cmdDisp" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "HealthDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "2"/>
+         <target component = "health" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "PrmDbDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "3"/>
+         <target component = "prmDb" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "CmdSeqDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "4"/>
+         <target component = "cmdSeq"  port = "cmdIn"       type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "FileDownlinkDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "5"/>
+         <target component = "fileDownlink" port = "cmdIn" type = "Cmd" num = "0"/>
+    </connection>
+    
+    <connection name = "SendBuffDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "6"/>
+         <target component = "sendBuffComp" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "RecvBuffDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "7"/>
+         <target component = "recvBuffComp" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
+    
+    
+    <connection name = "SG1Disp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "8"/>
+         <target component = "SG1" port = "cmdIn" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "SG2Disp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "9"/>
+         <target component = "SG2" port = "cmdIn" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "SG3Disp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "10"/>
+         <target component = "SG3" port = "cmdIn" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "SG4Disp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "11"/>
+         <target component = "SG4" port = "cmdIn" type = "Cmd" num = "0"/>
+    </connection>
+    <connection name = "SG5Disp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "12"/>
+         <target component = "SG5" port = "cmdIn" type = "Cmd" num = "0"/>
+    </connection>
+    
+    <connection name = "PingRcvDisp">
+         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "13"/>
+         <target component = "pingRcvr" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
+</fpl>

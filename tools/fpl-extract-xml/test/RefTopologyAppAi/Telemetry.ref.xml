@@ -1,0 +1,78 @@
+<fpl>
+    <connection name = "fileDownlinkTlm">
+        <source component = "fileDownlink" port = "tlmOut" type = "Tlm" num = "0"/>
+        <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "FileUplinkBufferManagerTlm">
+        <source component = "fileUplinkBufferManager" port = "tlmOut" type = "Tlm" num = "0"/>
+        <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "FileUplinkTlm">
+        <source component = "fileUplink" port = "tlmOut" type = "Tlm" num = "0"/>
+        <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "FileDownlinkBufferManagerTlm">
+        <source component = "fileDownlinkBufferManager" port = "tlmOut" type = "Tlm" num = "0"/>
+        <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "cmdSeqTlm">
+        <source component = "cmdSeq" port = "tlmOut" type = "Tlm" num = "0"/>
+        <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "cmdDispTlm">
+        <source component = "cmdDisp" port = "Tlm" type = "Tlm" num = "0"/>
+        <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "Rg1Tlm">
+         <source component = "rateGroup1Comp" port = "Tlm" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "Rg2Tlm">
+         <source component = "rateGroup2Comp" port = "Tlm" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "Rg3Tlm">
+         <source component = "rateGroup3Comp" port = "Tlm" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "healthTlm">
+        <source component = "health" port = "Tlm" type = "Tlm" num = "0"/>
+        <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "SG1Tlm">
+         <source component = "SG1" port = "tlmOut" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "SG2Tlm">
+         <source component = "SG2" port = "tlmOut" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "SG3Tlm">
+         <source component = "SG3" port = "tlmOut" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "SG4Tlm">
+         <source component = "SG4" port = "tlmOut" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "SG5Tlm">
+         <source component = "SG5" port = "tlmOut" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "pingTlm">
+         <source component = "pingRcvr" port = "Tlm" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "sendBufTlm">
+         <source component = "sendBuffComp" port = "Tlm" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "recvBufTlm">
+         <source component = "recvBuffComp" port = "Tlm" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+    <connection name = "blockDrvTlm">
+         <source component = "blockDrv" port = "Tlm" type = "Tlm" num = "0"/>
+         <target component = "chanTlm" port = "TlmRecv" type = "Tlm" num = "0"/>
+    </connection>
+</fpl>

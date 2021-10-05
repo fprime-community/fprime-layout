@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+# ----------------------------------------------------------------------
+# subdir_targets
+# Run target in all immediate subdirectories
+# ----------------------------------------------------------------------
+
+for path in `find . -maxdepth 2 -mindepth 2 -name $2.do`
+do
+  dir=`dirname $path`
+  echo $dir/$2
+done | xargs $1

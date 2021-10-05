@@ -1,0 +1,24 @@
+<fpl>
+    <connection name = "eventLoggerPkts">
+        <source component = "eventLogger" port = "PktSend" type = "Com" num = "0"/>
+        <target component = "groundIf" port = "downlinkPort" type = "Com" num = "0"/>
+    </connection>
+   
+    <connection name = "chanTlmPkts">
+        <source component = "chanTlm" port = "PktSend" type = "Com" num = "0"/>
+        <target component = "groundIf" port = "downlinkPort" type = "Com" num = "0"/>
+    </connection>
+   
+    <connection name = "fileDownlinkBufferGet">
+        <source component = "fileDownlink" port = "bufferGetCaller" type = "BufferGet" num = "0"/>
+        <target component = "fileDownlinkBufferManager" port = "bufferGetCallee" type = "BufferGet" num = "0"/>
+    </connection>
+    <connection name = "fileDownlinkBufferManagerBufferReturn">
+        <source component = "groundIf" port = "fileDownlinkBufferSendOut" type = "BufferSend" num = "0"/>
+        <target component = "fileDownlinkBufferManager" port = "bufferSendIn" type = "BufferSend" num = "0"/>
+    </connection>
+    <connection name = "fileDownlinkBufferSend">
+        <source component = "fileDownlink" port = "bufferSendOut" type = "BufferSend" num = "0"/>
+        <target component = "groundIf" port = "fileDownlinkBufferSendIn" type = "BufferSend" num = "0"/>
+    </connection>
+</fpl>

@@ -1,0 +1,19 @@
+<fpl>
+    <connection name = "cmdDispPkts">
+        <source component = "groundIf" port = "uplinkPort" type = "Com" num = "0"/>
+        <target component = "cmdDisp" port = "seqCmdBuff" type = "Com" num = "0"/>
+    </connection>
+
+    <connection name = "groundIfIfFileUplinkBufferGet">
+        <source component = "groundIf" port = "fileUplinkBufferGet" type = "BufferGet" num = "0"/>
+        <target component = "fileUplinkBufferManager" port = "bufferGetCallee" type = "BufferGet" num = "0"/>
+    </connection>
+    <connection name = "fileUplinkBuffIn">
+        <source component = "fileUplink" port = "bufferSendOut" type = "BufferSend" num = "0"/>
+        <target component = "fileUplinkBufferManager" port = "bufferSendIn" type = "BufferSend" num = "0"/>
+    </connection>
+    <connection name = "groundIfIfFileUplinkBufferSend">
+        <source component = "groundIf" port = "fileUplinkBufferSendOut" type = "BufferSend" num = "0"/>
+        <target component = "fileUplink" port = "bufferSendIn" type = "BufferSend" num = "0"/>
+    </connection>
+</fpl>

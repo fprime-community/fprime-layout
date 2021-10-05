@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+. ../../scripts/utils.sh
+
+clean
+rm -rf xml txt json eps

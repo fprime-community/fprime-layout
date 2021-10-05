@@ -1,0 +1,6 @@
+= Examples
+
+This directory contains examples of using FPL.
+
+* `ref`: An example based on the Ref application from the
+F Prime distribution.

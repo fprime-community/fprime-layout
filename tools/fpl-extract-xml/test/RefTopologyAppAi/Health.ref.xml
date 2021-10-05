@@ -1,0 +1,98 @@
+<fpl>
+    <connection name = "Rg1PingSend">
+         <source component = "rateGroup1Comp" port = "PingOut" type = "Ping" num = "0"/>
+         <target component = "health" port = "PingReturn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "Rg1PingRecv">
+         <source component = "health" port = "PingSend" type = "Ping" num = "0"/>
+         <target component = "rateGroup1Comp" port = "PingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "Rg2PingSend">
+         <source component = "health" port = "PingSend" type = "Ping" num = "1"/>
+         <target component = "rateGroup2Comp" port = "PingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "Rg2PingRecv">
+         <source component = "rateGroup2Comp" port = "PingOut" type = "Ping" num = "0"/>
+         <target component = "health" port = "PingReturn" type = "Ping" num = "1"/>
+    </connection>
+    <connection name = "Rg3PingSend">
+         <source component = "health" port = "PingSend" type = "Ping" num = "2"/>
+         <target component = "rateGroup3Comp" port = "PingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "Rg3PingRecv">
+         <source component = "rateGroup3Comp" port = "PingOut" type = "Ping" num = "0"/>
+         <target component = "health" port = "PingReturn" type = "Ping" num = "2"/>
+    </connection>
+    <connection name = "cmdDispPingIn">
+        <source component = "health" port = "PingSend" type = "Ping" num = "3"/>
+        <target component = "cmdDisp" port = "pingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "cmdDispPingRecv">
+        <source component = "cmdDisp" port = "pingOut" type = "Ping" num = "0"/>
+        <target component = "health" port = "PingReturn" type = "Ping" num = "3"/>
+    </connection>
+    <connection name = "eventLoggerPingSend">
+        <source component = "health" port = "PingSend" type = "Ping" num = "4"/>
+        <target component = "eventLogger" port = "pingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "eventLoggerPingRecv">
+        <source component = "eventLogger" port = "pingOut" type = "Ping" num = "0"/>
+        <target component = "health" port = "PingReturn" type = "Ping" num = "4"/>
+    </connection>
+    <connection name = "cmdSeqPingSend">
+        <source component = "health" port = "PingSend" type = "Ping" num = "5"/>
+        <target component = "cmdSeq" port = "pingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "cmdSeqPingRecv">
+        <source component = "cmdSeq" port = "pingOut" type = "Ping" num = "0"/>
+        <target component = "health" port = "PingReturn" type = "Ping" num = "5"/>
+    </connection>
+    <connection name = "chanTlmPingSend">
+        <source component = "health" port = "PingSend" type = "Ping" num = "6"/>
+        <target component = "chanTlm" port = "pingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "chanTlmPingRecv">
+        <source component = "chanTlm" port = "pingOut" type = "Ping" num = "0"/>
+        <target component = "health" port = "PingReturn" type = "Ping" num = "6"/>
+    </connection>
+    <connection name = "prmDbPingSend">
+        <source component = "health" port = "PingSend" type = "Ping" num = "7"/>
+        <target component = "prmDb" port = "pingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "prmDbPingRecv">
+        <source component = "prmDb" port = "pingOut" type = "Ping" num = "0"/>
+        <target component = "health" port = "PingReturn" type = "Ping" num = "7"/>
+    </connection>
+    <connection name = "fileUplinkPingSend">
+        <source component = "health" port = "PingSend" type = "Ping" num = "8"/>
+        <target component = "fileUplink" port = "pingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "fileUplinkPingRecv">
+        <source component = "fileUplink" port = "pingOut" type = "Ping" num = "0"/>
+        <target component = "health" port = "PingReturn" type = "Ping" num = "8"/>
+    </connection>
+    <connection name = "fileDownlinkPingSend">
+        <source component = "health" port = "PingSend" type = "Ping" num = "9"/>
+        <target component = "fileDownlink" port = "pingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "fileDownlinkPingRecv">
+        <source component = "fileDownlink" port = "pingOut" type = "Ping" num = "0"/>
+        <target component = "health" port = "PingReturn" type = "Ping" num = "9"/>
+    </connection>
+    <connection name = "PingRcvPingRecv">
+         <source component = "health" port = "PingSend" type = "Ping" num = "10"/>
+         <target component = "pingRcvr" port = "PingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "PingRcvPingSend">
+         <source component = "pingRcvr" port = "PingOut" type = "Ping" num = "0"/>
+         <target component = "health" port = "PingReturn" type = "Ping" num = "10"/>
+    </connection>
+    <connection name = "blockDrvPingSend">
+         <source component = "health" port = "PingSend" type = "Ping" num = "11"/>
+         <target component = "blockDrv" port = "PingIn" type = "Ping" num = "0"/>
+    </connection>
+    <connection name = "blockDrvPingRecv">
+         <source component = "blockDrv" port = "PingOut" type = "Ping" num = "0"/>
+         <target component = "health" port = "PingReturn" type = "Ping" num = "11"/>
+    </connection>
+</fpl>

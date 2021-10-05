@@ -1,0 +1,58 @@
+<fpl>
+    <connection name = "EventLoggerReply">
+        <source component = "eventLogger" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "CmdSeqReply">
+        <source component = "cmdSeq" port = "cmdResponseOut" type = "CmdResponse" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "PrmDbReply">
+        <source component = "prmDb" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "CmdDispReply">
+        <source component = "cmdDisp" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "HealthReply">
+        <source component = "health" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "FileDownlinkReply">
+        <source component = "fileDownlink" port = "cmdResponseOut" type = "CmdResponse" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "PingRcvStat">
+         <source component = "pingRcvr" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "recvBuffStat">
+         <source component = "recvBuffComp" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "sendBuffStat">
+         <source component = "sendBuffComp" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "SG1Stat">
+         <source component = "SG1" port = "cmdResponseOut" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "SG2Stat">
+         <source component = "SG2" port = "cmdResponseOut" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "SG3Stat">
+         <source component = "SG3" port = "cmdResponseOut" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "SG4Stat">
+         <source component = "SG4" port = "cmdResponseOut" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "SG5Stat">
+         <source component = "SG5" port = "cmdResponseOut" type = "CmdResponse" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+</fpl>

@@ -1,0 +1,11 @@
+<fpl>
+    <connection name = "SeqCompStatus">
+        <source component = "cmdDisp" port = "seqCmdStatus" type = "CmdResponse" num = "1"/>
+        <target component = "cmdSeq" port = "cmdResponseIn" type = "CmdResponse" num = "0"/>
+    </connection>
+    <!-- Input port number needs to be the same as previous dispatch -->
+    <connection name = "SeqCmdSend">
+        <source component = "cmdSeq" port = "comCmdOut" type = "Com" num = "0"/>
+        <target component = "cmdDisp" port = "seqCmdBuff" type = "Com" num = "1"/>
+    </connection>
+</fpl>

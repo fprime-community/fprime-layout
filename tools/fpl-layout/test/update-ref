@@ -1,0 +1,41 @@
+#!/bin/sh
+
+. ../../../scripts/test-utils.sh
+
+fpl_layout=../../../bin/fpl-layout
+
+update()
+{
+  infile=$1
+  if test -n "$2"
+  then
+    outfile=$2
+  else
+    outfile=$infile
+  fi
+  $fpl_layout < $infile.txt > $outfile.ref.txt 2>&1
+}
+
+for file in `find . -name '*.ref.txt'`
+do
+  rm $file
+done
+
+. ./tests.sh
+
+# Default update ref
+for t in $tests
+do
+  echo "
+$t()
+{
+  update $t
+}"
+done > default-update-ref.sh
+. ./default-update-ref.sh
+
+for t in $tests
+do
+  echo "updating ref output for $t"
+  $t
+done

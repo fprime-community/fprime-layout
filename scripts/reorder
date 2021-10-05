@@ -1,0 +1,154 @@
+#!/bin/sh
+
+# ----------------------------------------------------------------------
+# reorder
+# ----------------------------------------------------------------------
+#
+# Reorder record fields, where each field is a line, and the
+# records are separated by blank lines.
+#
+# For example:
+#
+#   'reorder 3 1 2 4 5' permutes the first five fields of each record 
+#   as follows and ignores the rest:
+# 
+#     3 -> 1
+#     1 -> 2
+#     2 -> 3
+#     4 -> 4
+#     5 -> 5
+#
+#   'reorder 1 3' selects fields 1 and 3.
+#
+#   'reorder 3 1' selects fields 1 and 3 in reverse order.
+#
+# If a field number refers to a field that does not exist, then
+# the field is treated as blank (~). For example, 'reorder 2 1'
+# applied to a file containing the lines
+#
+#   A
+# 
+#   B
+#
+# yields
+#
+#   ~
+#   A
+#
+#   ~
+#   B
+#
+# You can use - to refer to a range of fields. For example,
+#
+#   reorder 1-3 5
+#
+# captures fields 1, 2, 3, and 5.
+#
+# You can omit the field number before the -. In this case, the 
+# implicit value is 1.  For example,
+#
+#   reorder -- -3
+#
+# captures fields 1, 2 and 3. (Note the -- so reorder 
+# doesn't interpret -3 as an option.)
+#
+# You can also omit the field number after the -. In this case,
+# the implicit value is the last field in the record.
+# For example, 
+#
+#   reorder 1 3-
+#
+# Captures fields 1 and 3 of records with 3 fields; fields
+# 1, 3, and 4 of records with 4 fields; and so forth.
+#
+# A bare - works too, and it represents all fields.
+# For example,
+# 
+#   reorder 1 -
+#
+# Duplicates field 1 in all records.
+#
+# Finally, you can use an argument that doesn't fit any of the
+# patterns above. In this case, the argument is interpreted as
+# a literal value, and the value is inserted in the output record
+# in the position corresponding to the argument.
+# For example,
+#
+#   reorder 1 '~' 2
+#
+# captures fields 1 and 2 and inserts a blank field between them.
+# ----------------------------------------------------------------------
+
+usage() {
+  echo 'usage: reorder -v' >&2
+  echo '       reorder [rows]' >&2
+  exit 1
+}
+
+while :; do
+  case $1 in
+    -v|--version)
+      echo 'reorder version 1.0'
+      exit 0 ;;
+    --)
+      shift
+      break ;;
+    -?*)
+      usage ;;
+    *)
+      break ;;
+  esac
+  shift
+done
+
+tmp=`mktemp tmp.XXXX`
+
+{
+  echo 'BEGIN {
+  RS=""; FS="\\n"
+}
+
+function print_field(arg) {
+  if ($arg == "")
+    print "~"
+  else
+    print $arg
+}
+
+{'
+  for arg in "$@"
+  do
+    if echo $arg | egrep -q '^-$' > /dev/null
+    then
+      echo '  for (i = 1; i <= NF; ++i)'
+      echo '    print_field(i)'
+    elif echo $arg | egrep -q '^-[0-9]+$' > /dev/null
+    then
+      end=`echo $arg | sed 's/^-//'`
+      echo '  for (i = 1; i <= '$end'; ++i)'
+      echo '    print_field(i)'
+    elif echo $arg | egrep -q '^[0-9]+-$' > /dev/null
+    then
+      start=`echo $arg | sed 's/-$//'`
+      echo '  for (i = '$start'; i <= NF; ++i)'
+      echo '    print_field(i)'
+    elif echo $arg | egrep -q '^[0-9]+-[0-9]+$' > /dev/null
+    then
+      start=`echo $arg | sed 's/-.*$//'`
+      end=`echo $arg | sed 's/^.*-//'`
+      echo '  for (i = '$start'; i <= '$end'; ++i)'
+      echo '    print_field(i)'
+    elif echo $arg | egrep -q '^[0-9]+$'
+    then
+      echo '  print_field('$arg')'
+    else
+      echo '  print "'`echo $arg | sed 's;";\";g'`'"'
+    fi
+  done
+    echo '  print ""'
+  echo '}'
+} > $tmp
+
+awk -f $tmp
+
+rm $tmp

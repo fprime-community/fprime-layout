@@ -1,0 +1,74 @@
+<fpl>
+    <connection name = "CmdSeqTextLog">
+        <source component = "cmdSeq" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "EventLoggerTextLog">
+        <source component = "eventLogger" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "HealthTextLog">
+        <source component = "health" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "groundIfTextLog">
+        <source component = "groundIf" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "FatalAdapterTextLog">
+        <source component = "fatalAdapter" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "PrmDbTextLogger">
+        <source component = "prmDb" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "CmdDispTextLogger">
+        <source component = "cmdDisp" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "Rg1Text">
+         <source component = "rateGroup1Comp" port = "LogText" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "Rg2Text">
+         <source component = "rateGroup2Comp" port = "LogText" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "Rg3Text">
+         <source component = "rateGroup3Comp" port = "LogText" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "PingText">
+        <source component = "pingRcvr" port = "LogText" type = "LogText" num = "0"/>
+        <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "SG1Text">
+         <source component = "SG1" port = "logTextOut" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "SG2Text">
+         <source component = "SG2" port = "logTextOut" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "SG3Text">
+         <source component = "SG3" port = "logTextOut" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "SG4Text">
+         <source component = "SG4" port = "logTextOut" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "SG5Text">
+         <source component = "SG5" port = "logTextOut" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "sendBufText">
+         <source component = "sendBuffComp" port = "LogText" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+    <connection name = "recvBufText">
+         <source component = "recvBuffComp" port = "LogText" type = "LogText" num = "0"/>
+         <target component = "textLogger" port = "TextLogger" type = "LogText" num = "0"/>
+    </connection>
+</fpl>

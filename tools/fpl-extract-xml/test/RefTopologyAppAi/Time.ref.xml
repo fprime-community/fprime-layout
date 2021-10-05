@@ -1,0 +1,94 @@
+<fpl>
+    <connection name = "prmDbTime">
+        <source component = "prmDb" port = "Time" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "eventLoggerTime">
+        <source component = "eventLogger" port = "Time" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "rg1Time">
+         <source component = "rateGroup1Comp" port = "Time" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "rg2Time">
+         <source component = "rateGroup2Comp" port = "Time" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "rg3Time">
+         <source component = "rateGroup3Comp" port = "Time" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "fileDownlinkBufferManagerTime">
+        <source component = "fileDownlinkBufferManager" port = "timeCaller" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "cmdSeqTime">
+        <source component = "cmdSeq" port = "timeCaller" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "healthTime">
+        <source component = "health" port = "Time" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "fileUplinkBufferManagerTime">
+        <source component = "fileUplinkBufferManager" port = "timeCaller" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "cmdDispTime">
+        <source component = "cmdDisp" port = "Time" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "fileUplinkTime">
+        <source component = "fileUplink" port = "timeCaller" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "fileDownlinkTmp">
+        <source component = "fileDownlink" port = "timeCaller" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "fatalAdapterTime">
+        <source component = "fatalAdapter" port = "Time" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "groundIfTime">
+        <source component = "groundIf" port = "Time" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "recvBuffTime">
+        <source component = "recvBuffComp" port = "Time" type = "Time" num = "0"/>
+        <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+     </connection>
+    <connection name = "SG1Time">
+         <source component = "SG1" port = "timeCaller" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "SG2Time">
+         <source component = "SG2" port = "timeCaller" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "SG3Time">
+         <source component = "SG3" port = "timeCaller" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "SG4Time">
+         <source component = "SG4" port = "timeCaller" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "SG5Time">
+         <source component = "SG5" port = "timeCaller" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "SendBuffTime">
+         <source component = "sendBuffComp" port = "Time" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "pingTime">
+         <source component = "pingRcvr" port = "Time" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>
+    <connection name = "blockDrvTime">
+         <source component = "blockDrv" port = "Time" type = "Time" num = "0"/>
+         <target component = "linuxTime" port = "timeGetPort" type = "Time" num = "0"/>
+    </connection>    
+</fpl>

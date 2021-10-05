@@ -1,0 +1,49 @@
+#!/bin/sh -e
+
+. ../../../scripts/test-utils.sh
+
+fpl_extract_xml=../../../bin/fpl-extract-xml
+
+update()
+{
+  args=$1
+  infile=$2
+  if test -n "$3"
+  then
+    outfile=$3
+  else
+    outfile=$infile
+  fi
+  $fpl_extract_xml $args $infile.xml > $outfile.ref.txt 2>&1
+}
+
+for file in `find . -name '*.ref.txt'`
+do
+  rm $file
+done
+
+. ./tests.sh
+
+# Default update ref
+for t in $tests
+do
+  echo "
+$t()
+{
+  rm -rf $t
+  mkdir $t
+  update '-d '$t $t
+  for file in \`ls $t/*.xml\`
+  do
+    base=\`basename \$file .xml\`
+    mv \$file $t/\$base.ref.xml
+  done
+}"
+done > default-update-ref.sh
+. ./default-update-ref.sh
+
+for t in $tests
+do
+  echo "updating ref output for $t"
+  $t
+done

@@ -1,0 +1,10 @@
+<fpl>
+    <connection name = "CommunicationRecv">
+        <source component = "socketIpDriver" port = "recv" type = "Fw::BufferSend" num = "0"/>
+        <target component = "groundIf" port = "readCallback" type = "Fw::BufferSend" num = "0"/>
+    </connection>
+    <connection name = "CommunicationSend">
+        <source component = "groundIf" port = "write" type = "Fw::BufferSend" num = "0"/>
+        <target component = "socketIpDriver" port = "send" type = "Fw::BufferSend" num = "0"/>
+    </connection>
+</fpl>

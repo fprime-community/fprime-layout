@@ -1,0 +1,62 @@
+<fpl>
+    <connection name = "EventLoggerReg">
+         <source component = "eventLogger" port = "CmdReg" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "0"/>
+    </connection>
+    <connection name = "CmdDispReg">
+         <source component = "cmdDisp" port = "CmdReg" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "1"/>
+    </connection>
+    <connection name = "HealthReg">
+         <source component = "health" port = "CmdReg" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "2"/>
+    </connection>
+    <connection name = "PrmDbReg">
+         <source component = "prmDb" port = "CmdReg" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "3"/>
+    </connection>
+    <connection name = "CmdSeqReg">
+         <source component = "cmdSeq" port = "cmdRegOut" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "4"/>
+    </connection>
+    <connection name = "FileDownlinkReg">
+         <source component = "fileDownlink" port = "cmdRegOut" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "5"/>
+    </connection>
+    
+    
+    <connection name = "SendBuffReg">
+         <source component = "sendBuffComp" port = "CmdReg" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "6"/>
+    </connection>
+    <connection name = "RecvBuffReg">
+         <source component = "recvBuffComp" port = "CmdReg" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "7"/>
+    </connection>
+    
+    
+    <connection name = "SG1Reg">
+         <source component = "SG1" port = "cmdRegOut" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "8"/>
+    </connection>
+    <connection name = "SG2Reg">
+         <source component = "SG2" port = "cmdRegOut" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "9"/>
+    </connection>
+    <connection name = "SG3Reg">
+         <source component = "SG3" port = "cmdRegOut" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "10"/>
+    </connection>
+    <connection name = "SG4Reg">
+         <source component = "SG4" port = "cmdRegOut" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "11"/>
+    </connection>
+    <connection name = "SG5Reg">
+         <source component = "SG5" port = "cmdRegOut" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "12"/>
+    </connection>
+    <connection name = "PingRcvReg">
+         <source component = "pingRcvr" port = "CmdReg" type = "CmdReg" num = "0"/>
+         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "13"/>
+    </connection>
+</fpl>

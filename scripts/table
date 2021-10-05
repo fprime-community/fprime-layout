@@ -1,0 +1,78 @@
+#!/bin/sh
+
+# ----------------------------------------------------------------------
+# table
+# Create an HTML table from a simple text input format
+# ----------------------------------------------------------------------
+
+usage() {
+  echo 'usage: table -v' >&2
+  echo '       table [-c color] [-t title] [-w width]' >&2
+  exit 1
+}
+
+width=1
+color=skyblue
+title=""
+
+while :; do
+  case $1 in
+    -v|--version)
+      echo 'table version 1.0'
+      exit 0 ;;
+    -c)
+      color=$2
+      shift ;;
+    -t)
+      title=$2
+      shift ;;
+    -w)
+      width=$2
+      shift ;;
+    --)
+      shift
+      break ;;
+    -?*)
+      usage ;;
+    *)
+      break ;;
+  esac
+  shift
+done
+
+
+awk 'BEGIN {
+  RS=""; FS="\n"
+  print "<HTML>"
+  print "<BODY>"
+  print "<TABLE>"
+  width='$width'
+  title="'"$title"'"
+  if (title != "") {
+    printf("<H1>%s</H1>\n", title)
+    print ""
+  }
+}
+
+NR == 1 { nfields = NF }
+
+{ 
+  if (NR > 1 && ((NR - 2) % (2*width)) < width)
+    printf("<TR BGCOLOR=\"'$color'\">")
+  else
+    printf("<TR>")
+  for (i = 1; i <= nfields; ++i) {
+    if ($i == "~") $i = ""
+    if (NR == 1)
+      printf("<TH>%s", $i)
+    else
+      printf("<TD>%s", $i)
+  }
+  print ""
+}
+
+END {
+  print "</TABLE>"
+  print "</BODY>"
+  print "</HTML>"
+}'

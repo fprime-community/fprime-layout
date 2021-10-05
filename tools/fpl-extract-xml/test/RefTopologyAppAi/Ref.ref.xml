@@ -1,0 +1,10 @@
+<fpl>
+    <connection name = "SendBuffDrv">
+         <source component = "sendBuffComp" port = "Data" type = "DataBuffer" num = "0"/>
+         <target component = "blockDrv" port = "BufferIn" type = "DataBuffer" num = "0"/>
+    </connection>
+    <connection name = "RecvBuffDrv">
+         <source component = "blockDrv" port = "BufferOut" type = "DataBuffer" num = "0"/>
+         <target component = "recvBuffComp" port = "Data" type = "DataBuffer" num = "0"/>
+    </connection>
+</fpl>

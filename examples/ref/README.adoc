@@ -1,0 +1,38 @@
+= Examples/ref
+
+This directory contains an example based on the Ref topology from
+the F Prime distribution.
+It shows how to annotate an F Prime XML file, extract subtopologies, and use 
+FPL to render the subtopologies.
+
+* `RefTopologyAppAi.xml`: An annotated version of the topology
+XML file from the Ref application in the F Prime distribution.
+To see the annotations, run 
+
++
+----
+grep -nC 3 FPL RefTopologyAppAi.xml | less
+----
+
++
+in this directory.
+
+* `./build`: Run this script to build the example.
+It will generate the following directories:
+
+** `xml`: The extracted XML connection files.
+
+** `txt`: The connection files converted to the
+https://github.jpl.nasa.gov/bocchino/fprime-layout/wiki/Topology-Input[FPL input format].
+
+** `json`: Layout files in the
+https://github.jpl.nasa.gov/bocchino/fprime-layout/wiki/Layout-Output[FPL output format].
+
+** `eps`: Rendered topologies in Encapsulated PostScript (EPS) format.
+
+* `./clean`: Run this script to delete the generated files.
+
+* `RateGroups`: The generated output for the RateGroups subtopology.
+You can browse this output without generating anything.
+If you are using GitHub, the The EPS file won't be displayed properly,
+but you can look at the PDF or PNG files.

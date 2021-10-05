@@ -1,0 +1,39 @@
+#!/bin/sh -e
+
+# Extract XML subtopologies
+rm -rf xml
+mkdir xml
+../../bin/fpl-extract-xml -d xml RefTopologyAppAi.xml
+
+# Convert XML to FPL input for each subtopology
+rm -rf txt
+mkdir txt
+for file in `ls xml/*.xml`
+do
+  base=`basename $file .xml`
+  outfile=txt/$base.txt
+  echo "generating $outfile" 1>&2
+  ../../bin/fpl-convert-xml $file > $outfile
+done
+
+# Generate JSON layout for each subtopology
+rm -rf json
+mkdir json
+for file in `ls txt/*.txt`
+do
+  base=`basename $file .txt`
+  outfile=json/$base.json
+  echo "generating $outfile" 1>&2
+  ../../bin/fpl-layout < $file > $outfile
+done
+
+# Generate EPS for each subtopology
+rm -rf eps
+mkdir eps
+for file in `ls txt/*.txt`
+do
+  base=`basename $file .txt`
+  outfile=eps/$base.eps
+  echo "generating $outfile" 1>&2
+  ../../bin/fpl-write-eps < $file > $outfile
+done

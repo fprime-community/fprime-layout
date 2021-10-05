@@ -1,0 +1,18 @@
+<fpl>
+    <connection name = "RecvBuffPrmGet">
+         <source component = "recvBuffComp" port = "ParamGet" type = "PrmGet" num = "0"/>
+         <target component = "prmDb" port = "getPrm" type = "PrmGet" num = "0"/>
+    </connection>
+    <connection name = "SendBuffPrmGet">
+         <source component = "sendBuffComp" port = "ParamGet" type = "PrmGet" num = "0"/>
+         <target component = "prmDb" port = "getPrm" type = "PrmGet" num = "0"/>
+    </connection>
+    <connection name = "RecvBuffPrmSet">
+         <source component = "recvBuffComp" port = "ParamSet" type = "PrmSet" num = "0"/>
+         <target component = "prmDb" port = "setPrm" type = "PrmSet" num = "0"/>
+    </connection>
+    <connection name = "SendBuffPrmSet">
+         <source component = "sendBuffComp" port = "ParamSet" type = "PrmSet" num = "0"/>
+         <target component = "prmDb" port = "setPrm" type = "PrmSet" num = "0"/>
+    </connection>
+</fpl>
