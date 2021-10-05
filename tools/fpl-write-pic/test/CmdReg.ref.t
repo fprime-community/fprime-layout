@@ -56,7 +56,6 @@ move to Instance_eventLogger.n + (6.5, 0)
 
 Instance_cmdDisp: instance("\fBcmdDisp\fR", 1.5, 6.625)
 move down 0.2 from Instance_cmdDisp.s
-move to Instance_cmdDisp.n + (6.5, 0)
 
 move to Instance_eventLogger.nw - (0, 0.375)
 

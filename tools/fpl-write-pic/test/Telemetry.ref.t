@@ -74,7 +74,6 @@ move to Instance_blockDrv.n + (6.5, 0)
 
 Instance_chanTlm: instance("\fBchanTlm\fR", 1.5, 1.625)
 move down 0.2 from Instance_chanTlm.s
-move to Instance_chanTlm.n + (6.5, 0)
 
 move to Instance_blockDrv.nw - (0, 0.375)
 

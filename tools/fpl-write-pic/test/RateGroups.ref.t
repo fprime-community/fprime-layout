@@ -57,7 +57,6 @@ move down 0.2 from Instance_SG5.s
 
 Instance_blockDrv: instance("\fBblockDrv\fR", 1.5, 1.75)
 move down 0.2 from Instance_blockDrv.s
-move to Instance_SG1.n + (4.833333333333334, 0)
 
 move to Instance_rateGroupDriverComp.nw - (0, 0.375)
 
