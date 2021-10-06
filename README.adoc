@@ -2,6 +2,9 @@
 
 This repository contains tools for laying out and visualizing topologies in the
 https://nasa.github.io/fprime[F Prime flight software framework].
+It is designed to work as a preprocessor for the visualization tool being
+developed
+https://github.com/fprime-community/fprime-visual[here].
 
 == Requirements
 
