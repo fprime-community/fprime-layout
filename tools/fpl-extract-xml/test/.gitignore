@@ -1,0 +1,7 @@
+*.out.xml
+*.out.txt
+*.diff.xml
+*.diff.txt
+default-tests.sh
+num_failed.txt
+test-output.txt

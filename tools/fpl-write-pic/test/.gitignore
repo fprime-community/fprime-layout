@@ -1,0 +1,6 @@
+*.out.t
+*.diff.txt
+default-tests.sh
+default-update-ref.sh
+num_failed.txt
+test-output.txt

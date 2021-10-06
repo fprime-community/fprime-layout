@@ -1,0 +1,5 @@
+bin
+build.properties
+target/
+num_failed.txt
+test-output.txt

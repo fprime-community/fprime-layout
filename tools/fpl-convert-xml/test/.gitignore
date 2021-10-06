@@ -1,0 +1,5 @@
+*.out.txt
+*.diff.txt
+default-tests.sh
+num_failed.txt
+test-output.txt

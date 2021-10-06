@@ -1,0 +1,3 @@
+*.out.eps
+default-tests.sh
+test-output.txt
