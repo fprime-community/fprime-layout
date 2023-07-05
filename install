@@ -1,5 +1,9 @@
 #!/bin/sh -e
 
+# Go to the working directory, so that relative paths work as expected
+wd=`dirname $0`
+cd $wd
+
 if test $# -gt 1
 then
   echo 'usage: install dest-dir' 1>&2
