@@ -43,17 +43,17 @@ do
   cp $jar $dest/$tool.jar
   echo '#!/bin/sh
 
-  java -jar '$dest'/'$tool'.jar $@' > $dest/$tool
+  java -jar `dirname $0`/'$tool'.jar $@' > $dest/$tool
   chmod +x $dest/$tool
 done
 
 # Install fpl-extract-xml
 src=tools/fpl-extract-xml/src
 cp $src/fpl-extract-xml.awk $dest
-sed 's;$FPL_BIN;'$dest';g' < $src/fpl-extract-xml > $dest/fpl-extract-xml
+sed 's;$FPL_BIN;`dirname $0`;g' < $src/fpl-extract-xml > $dest/fpl-extract-xml
 chmod +x $dest/fpl-extract-xml
 
 # Install fpl-write-eps
 src=tools/fpl-write-eps/src
-sed 's;$FPL_BIN;'$dest';g' < $src/fpl-write-eps > $dest/fpl-write-eps
+sed 's;$FPL_BIN;`dirname $0`;g' < $src/fpl-write-eps > $dest/fpl-write-eps
 chmod +x $dest/fpl-write-eps
