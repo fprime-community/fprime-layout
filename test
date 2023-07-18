@@ -23,7 +23,7 @@ num_failed=0
   else
     printf "$num_failed tests "
     echo_red FAILED
-    for diff_file in `find . -name "*.diff.txt"`
+    for diff_file in `find . -name "*.diff.txt" -size +0c`
     do
         echo "---------------------------------------"
         echo "[ERROR] Difference Detected: $diff_file"
