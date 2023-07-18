@@ -1,0 +1,14 @@
+name: Build Native Images
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build Native Images
+      uses: fprime-community/native-images-action@main
