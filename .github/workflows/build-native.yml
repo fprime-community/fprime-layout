@@ -10,5 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: "Checkout Repository"
+      uses: actions/checkout@v3
     - name: Build Native Images
       uses: fprime-community/native-images-action@main
