@@ -7,14 +7,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: "Checkout Repository"
-      uses: actions/checkout@v3
-    - name: Build Native Images
-      uses: fprime-community/native-images-action@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tools: "fpl-write-pic fpl-convert-xml fpl-layout"
+  run:
+    name: "Package"
+    uses: "fprime-community/native-images-action/.github/workflows/native-build.yml@main"
+    with:
+      working-directory: $GITHUB_WORKSPACE
+
