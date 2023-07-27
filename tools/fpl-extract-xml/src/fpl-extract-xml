@@ -20,7 +20,7 @@ def extract_sections(xml_file_path, output_directory_path):
 
 def main():
     parser = argparse.ArgumentParser(description="Extract sections from XML files.")
-    parser.add_argument("input_files", nargs="+", type=str, help="List of input XML files.")
+    parser.add_argument("files", nargs="+", type=str, help="List of input XML files.")
     parser.add_argument("-d", "--output-directory", type=str, default=".", help="Path to the output directory for saving sections.")
     args = parser.parse_args()
 
@@ -29,7 +29,7 @@ def main():
     if not output_directory_path.exists():
         output_directory_path.mkdir(parents=True)
 
-    for xml_file_path in args.input_files:
+    for xml_file_path in args.files:
         extract_sections(xml_file_path, output_directory_path)
 
 if __name__ == "__main__":
