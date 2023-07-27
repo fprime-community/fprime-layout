@@ -49,8 +49,7 @@ done
 
 # Install fpl-extract-xml
 src=tools/fpl-extract-xml/src
-cp $src/fpl-extract-xml.awk $dest
-sed 's;$FPL_BIN;`dirname $0`;g' < $src/fpl-extract-xml > $dest/fpl-extract-xml
+cp $src/fpl-extract-xml $dest
 chmod +x $dest/fpl-extract-xml
 
 # Install fpl-write-eps
