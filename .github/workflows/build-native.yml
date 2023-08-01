@@ -12,4 +12,5 @@ jobs:
     uses: "fprime-community/native-images-action/.github/workflows/native-build.yml@main"
     with:
       working-directory: $GITHUB_WORKSPACE
+    secrets: inherit
 
