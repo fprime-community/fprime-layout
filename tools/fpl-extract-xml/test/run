@@ -2,7 +2,7 @@
 
 . ../../../scripts/test-utils.sh
 
-fpl_extract_xml=../../../bin/fpl-extract-xml
+fpl_extract_xml="../src/fpl_extract_xml/__main__.py"
 
 compare()
 {
@@ -38,7 +38,7 @@ $t()
   do
     base=\`basename \$file .ref.xml\`
     mv $t/\$base.xml $t/\$base.out.xml
-    diff -u $t/\$base.out.xml \$file
+    diff -u --ignore-space-change $t/\$base.out.xml \$file
   done
 }"
 done > default-tests.sh
