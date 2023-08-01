@@ -49,7 +49,7 @@ done
 
 # Install fpl-extract-xml
 src=tools/fpl-extract-xml/src
-cp $src/fpl-extract-xml $dest
+cp $src/fpl_extract_xml/__main__.py $dest/fpl-extract-xml
 chmod +x $dest/fpl-extract-xml
 
 # Install fpl-write-eps

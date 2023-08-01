@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fpl-extract-xml"
+authors = [
+    {name = "Thomas Boyer-Chammard", email = "Thomas.Boyer.Chammard@jpl.nasa.gov"},
+]
+description = "Extract all F´ sections from an XML file and save them to the output directory."
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["fpp", "fprime", "embedded", "nasa"]
+license = {text = "Apache 2.0 License"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    'importlib-metadata; python_version<"3.8"',
+]
+dynamic = ["version"]
+
+[project.scripts]
+fpl-extract-xml="fpl_extract_xml.__main__:main"
