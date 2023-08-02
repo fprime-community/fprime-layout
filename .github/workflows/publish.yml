@@ -25,8 +25,8 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
-          packages-dir:: tools/fpl-extract-xml/dist
+          packages-dir: tools/fpl-extract-xml/dist
       - name: Publish distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages-dir:: tools/fpl-extract-xml/dist
+          packages-dir: tools/fpl-extract-xml/dist
