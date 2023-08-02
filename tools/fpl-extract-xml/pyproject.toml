@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fpl-extract-xml"
+name = "fprime-fpl-extract-xml"
 authors = [
     {name = "Thomas Boyer-Chammard", email = "Thomas.Boyer.Chammard@jpl.nasa.gov"},
 ]
