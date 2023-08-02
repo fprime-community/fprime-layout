@@ -1,0 +1,18 @@
+name: Build Native Images
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  release:
+    types: [ published ]
+
+jobs:
+  run:
+    name: "Package"
+    uses: "fprime-community/native-images-action/.github/workflows/native-build.yml@main"
+    with:
+      working-directory: $GITHUB_WORKSPACE
+    secrets: inherit
+
