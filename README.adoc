@@ -19,6 +19,8 @@ To install to a different directory, run `./install` _dir-name_.
 Once you have installed the FPL tools to a directory `FPL_INSTALL_DIR`, you
 can put `FPL_INSTALL_DIR` in your shell path. For example, in bash:
 
+> Note: most users will install via the published native PIP packages.
+
 [source,bash]
 ----
 % export FPL_INSTALL_DIR=[path-to-fpl-install-dir]
