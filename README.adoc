@@ -11,6 +11,8 @@ https://github.com/fprime-community/fprime-visual[here].
 * A Unix environment, such as Linux, Mac OS, or the Windows Subsystem for Linux.
 * The https://www.scala-sbt.org[Simple Build Tool (sbt)] for Scala.
 
+Note: pre-built packages are available through PIP.
+
 == Installation
 
 To install in the `bin` directory, run `./install`.
