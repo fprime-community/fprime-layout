@@ -19,7 +19,10 @@ classifiers = [
 dependencies = [
     'importlib-metadata; python_version<"3.8"',
 ]
-version = "1.0.1a4"
+dynamic = ["version"]
 
 [project.scripts]
 fpl-extract-xml="fpl_extract_xml.__main__:main"
+
+[tool.setuptools_scm]
+root = "../.."
