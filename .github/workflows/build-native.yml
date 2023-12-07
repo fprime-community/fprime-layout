@@ -16,5 +16,6 @@ jobs:
       working-directory: $GITHUB_WORKSPACE
       meta-package: fprime-layout
       extra-tools: fpl_extract_xml
+      fast-hack: true
     secrets: inherit
 
