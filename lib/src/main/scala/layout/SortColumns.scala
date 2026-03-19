@@ -91,17 +91,22 @@ object SortColumns {
     val min: Int,
     val max: Int
   ) extends Ordered[ScoreInterval] {
-    
-    override def compare(that: ScoreInterval): Int =
-      if (this.max < that.min) -1
-      else if (this.min > that.max) 1
-      else 0
+
+    override def compare(that: ScoreInterval): Int = {
+      // We compare the midpoints of the intervals.
+      // This comparison has the following properties:
+      // 1. If this is completely to the left of that, the order is less
+      // 2. If this is completely to the right of that, the order is greater
+      val n1 = this.min + this.max
+      val n2 = that.min + that.max
+      n1.compare(n2)
+    }
 
   }
 
   private object ScoreInterval {
 
-    /** Default should not compare less than or greater to any real interval */
+    /** Default should overlap with every actual interval */
     val default = ScoreInterval(0, 100000)
 
   }
